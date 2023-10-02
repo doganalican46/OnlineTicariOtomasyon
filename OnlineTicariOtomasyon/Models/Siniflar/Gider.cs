@@ -7,16 +7,16 @@ using System.Web;
 
 namespace OnlineTicariOtomasyon.Models.Siniflar
 {
-    public class Kategori
+    public class Gider
     {
         [Key]
-        public int KategoriID { get; set; }
+        public int GiderID { get; set; }
 
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
-        public string KategoriAd { get; set; }
-
-        public ICollection<Urun> Uruns { get; set; }
+        [StringLength(100)]
+        public string Aciklama { get; set; }
+        public DateTime Tarih { get; set; }
+        public decimal Tutar { get; set; }
     }
 }
