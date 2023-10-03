@@ -5,6 +5,8 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h1>Kategoriler</h1>
+
 <table class="table table-bordered" style="margin-top:20px;">
 
     <tr>
@@ -16,10 +18,11 @@
         <tr>
             <td>@k.KategoriID</td>
             <td>@k.KategoriAd</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Kategori/KategoriSil/@k.KategoriID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Kategori/KategoriGetir/@k.KategoriID" class="btn btn-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
-<button class="btn btn-primary">Yeni Kategori Ekle</button>
+<a href="/Kategori/KategoriEkle" class="btn btn-primary">Kategori Ekle</a>
+
