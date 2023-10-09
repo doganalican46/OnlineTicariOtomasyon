@@ -54,5 +54,12 @@ namespace OnlineTicariOtomasyon.Controllers
 
             return View();
         }
+
+
+
+        public ActionResult KolayTablolar()
+        {
+            return View();
+        }
     }
 }
