@@ -14,7 +14,6 @@
 
 <table class="table table-hover">
     <tr>
-        <th>SATIŞ ID</th>
         <th>URUN ADI</th>
         <th>PERSONEL</th>
         <th>ADET</th>
@@ -29,7 +28,6 @@
     @foreach (var x in Model)
     {
 <tr>
-    <td>@x.SatisID</td>
     <td>@x.Urun.UrunAd</td>
     <td>@x.Personel.PersonelAd @x.Personel.PersonelSoyad</td>
     <td>@x.Adet</td>

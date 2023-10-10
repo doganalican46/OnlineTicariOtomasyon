@@ -12,7 +12,6 @@
 <table id="SatislarTable" class="table table-hover ">
     <thead>
         <tr>
-            <th>ID</th>
             <th>URUN</th>
             <th>CARİ</th>
             <th>PERSONEL</th>
@@ -29,7 +28,6 @@
         @foreach (var k in Model)
         {
             <tr>
-                <td>@k.SatisID</td>
                 <td>@k.Urun.UrunAd</td>
                 <td>@k.Cariler.CariAd @k.Cariler.CariSoyad</td>
                 <td>@k.Personel.PersonelAd @k.Personel.PersonelSoyad</td>

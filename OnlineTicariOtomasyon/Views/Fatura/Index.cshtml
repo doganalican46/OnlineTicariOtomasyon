@@ -12,36 +12,65 @@
 <table class="table table-bordered " style="margin-top:20px;">
 
     <tr>
-        <th>ID</th>
-        <th>SERİ NO</th>
-        <th>SIRA NO</th>
-        <th>VERGİ DAİRESİ</th>
+        <th>SERİ NO-SIRA NO</th>
         <th>TARİH</th>
         <th>SAAT</th>
-
-        <th>TESLİM EDEN</th>
-        <th>TESLİM ALAN</th>
         <th>TOPLAM</th>
         <th>DETAYLAR</th>
     </tr>
     @foreach (var k in Model)
     {
-<tr>
-    <td>@k.FaturaID</td>
-    <td>@k.FaturaSeriNo</td>
-    <td>@k.FaturaSiraNo</td>
-    <td>@k.VergiDairesi</td>
-    <td>@k.Tarih</td>
-    <td>@k.Saat</td>
-    <td>@k.TeslimEden</td>
-    <td>@k.TeslimAlan</td>
-    <td>@k.Toplam</td>
-    <td>
-        <a href="/Fatura/FaturaGetir/@k.FaturaID" class="btn btn-success">Güncelle</a>
-        <a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-info">Detay</a>
-    </td>
-</tr>
+        <tr>
+            <td>@k.FaturaSeriNo - @k.FaturaSiraNo</td>
+            <td>@k.Tarih</td>
+            <td>@k.Saat</td>
+            <td>@k.Toplam ₺</td>
+            <td>
+                <a href="/Fatura/FaturaGetir/@k.FaturaID" class="btn btn-success">Güncelle</a>
+                <a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-info">Detay</a>
+                <a class="btn btn-warning">Yeni Kalem</a>
+            </td>
+        </tr>
     }
 </table>
 
 <a href="/Fatura/FaturaEkle" class="btn btn-primary">Fatura Ekle</a>
+
+
+
+<br />
+<br />
+<br />
+
+<button class="btn btn-danger" type="button" data-toggle="modal" data-target="#Modal1">popup</button>
+
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Pop-up Ekranı</h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Seri No</th>
+                        <th>Sıra No</th>
+                        <th>Toplam</th>
+                    </tr>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.FaturaSeriNo </td>
+                            <td>@x.FaturaSiraNo </td>
+                            <td>@x.Toplam</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">X</button>
+            </div>
+        </div>
+    </div>
+</div>

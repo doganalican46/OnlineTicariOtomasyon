@@ -11,7 +11,6 @@
 <table class="table table-hover">
 
     <tr>
-        <th>ID</th>
         <th>AD-SOYAD</th>
         <th>DEPARTMAN</th>
         <th>GORSEL</th>
@@ -21,7 +20,6 @@
     @foreach (var k in Model)
     {
         <tr>
-            <td>@k.PersonelID</td>
             <td>@k.PersonelAd @k.PersonelSoyad</td>
             <td>@k.Departman.DepartmanAd</td>
             <td> <img src="@k.PersonelGorsel" alt="Personel Görsel" style="width:50px; height:50px;"/> </td>
