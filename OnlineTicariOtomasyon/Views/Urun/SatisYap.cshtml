@@ -1,0 +1,46 @@
+﻿@model OnlineTicariOtomasyon.Models.Siniflar.SatisHareket
+@{
+    ViewBag.Title = "SatisYap";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Satış Yap</h2>
+<br />
+<form method="post" class="form-group">
+    @Html.LabelFor(x => x.Urunid)
+    <input type="text" name="UrunID" value="@ViewBag.dgr1" class="form-control" readonly />
+    <br />
+    @Html.Label("Personel")
+    @Html.DropDownListFor(x => x.Personelid, (List<SelectListItem>)ViewBag.dgr3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Cariid)
+    @Html.TextBoxFor(x => x.Cariid, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Adet)
+    <input type="number" class="form-control" max="10" min="1" placeholder="Adet Girin" id="adet_input" onchange="sum();" name="Adet"/>
+    <br />
+    @Html.LabelFor(x => x.Fiyat)
+    <input type="text" name="Fiyat" value="@ViewBag.dgr2" class="form-control" id="fiyat_input" onkeyup="sum();"/>
+    <br />
+    @Html.LabelFor(x => x.ToplamTutar)
+    <input type="text" name="ToplamTutar" class="form-control" id="toplam_input" />
+    <br />
+
+
+    <a href="/Urun" class="btn btn-danger">İptal</a>
+    <button class="btn btn-info">Satış Yap</button>
+</form>
+
+
+<script>
+
+    function sum() {
+        var adet = document.getElementById('adet_input').value;
+        var fiyat = document.getElementById('fiyat_input').value;
+        var toplam = parseInt(adet) * parseInt(fiyat);
+        if (!isNaN(toplam)) {
+            document.getElementById('toplam_input').value = toplam;
+        }
+    }
+
+</script>
