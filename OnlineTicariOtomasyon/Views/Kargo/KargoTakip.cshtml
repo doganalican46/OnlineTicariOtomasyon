@@ -1,0 +1,36 @@
+﻿@using OnlineTicariOtomasyon.Models.Siniflar
+@model List<KargoTakip>
+@{
+    ViewBag.Title = "KargoTakip";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Kargo Takip</h2>
+<br />
+@using (Html.BeginForm("Index", "Kargo", FormMethod.Get))
+{
+    <p>
+        Kargo Takip No: @Html.TextBox("p")
+        <input type="submit" value="Ara" class="btn btn-danger" />
+    </p>
+}
+
+<table class="table table-bordered " style="margin-top:20px;">
+
+    <tr>
+        <th>AÇIKLAMA</th>
+        <th>TARİH</th>
+        
+    </tr>
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>@k.Aciklama</td>
+            <td>@k.TarihZaman</td>
+        </tr>
+    }
+</table>
+
+<a href="/Kargo" class="btn btn-primary">Tamam</a>
+
