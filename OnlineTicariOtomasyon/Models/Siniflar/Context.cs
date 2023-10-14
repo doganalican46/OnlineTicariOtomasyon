@@ -26,5 +26,8 @@ namespace OnlineTicariOtomasyon.Models.Siniflar
 
 
         public DbSet<Yapilicaklar> Yapilicaklars { get; set; }
+
+
+        public DbSet<Mesajlar> Mesajlars { get; set; }
     }
 }
