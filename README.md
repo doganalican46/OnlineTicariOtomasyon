@@ -31,7 +31,11 @@ Develop Online Commercial Automation Project
 
 
 ## Interfaces:
-Will be added soon
+![Screenshot 2023-10-30 120615](https://github.com/doganalican46/OnlineTicariOtomasyon/assets/76850300/7b879b2b-63ef-497e-bad2-b3353fdffe72)
+![Screenshot 2023-10-30 120604](https://github.com/doganalican46/OnlineTicariOtomasyon/assets/76850300/293a1553-90e5-4af3-bda6-b80f30ef4b4f)
+![Screenshot 2023-10-30 120539](https://github.com/doganalican46/OnlineTicariOtomasyon/assets/76850300/d8a93694-1744-4d74-b2f1-254a91e40f7f)
+![Screenshot 2023-10-30 120513](https://github.com/doganalican46/OnlineTicariOtomasyon/assets/76850300/28172bd5-4546-4cbd-b5c4-b4361f92954e)
+![Screenshot 2023-10-30 120435](https://github.com/doganalican46/OnlineTicariOtomasyon/assets/76850300/8b4aa67e-1c48-45a9-9062-0648ecebfc9c)
 
 ___________________________________________________________________________________________________________________
 
